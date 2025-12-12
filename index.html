@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kalawati Dental Clinic &amp; Implant Center</title>
+  <meta name="description" content="Kalawati Dental Clinic - Quality dental care by Dr. Avinash and Dr. Sandhya in Lucknow" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body.dark-mode {
+  background: #0f1724;
+  color: #e0e7ff;
+}
+
+body.dark-mode a { color: #a5b4fc; }
+
+body.dark-mode .card, 
+body.dark-mode section.site-section,
+body.dark-mode #popup-box {
+  background: #1e293b;
+  color: #e0e7ff;
+  box-shadow: 0 10px 36px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .btn-primary {
+  background: linear-gradient(90deg,#3b82f6,#9333ea);
+}
+
+body.dark-mode .btn-ghost {
+  border-color: rgba(165,180,252,0.3);
+  color: #a5b4fc;
+}
+
+body.dark-mode .topnav {
+  backdrop-filter: blur(6px);
+  background: rgba(15,23,36,0.7);
+}
+
+body.dark-mode .map-wrap iframe {
+  filter: invert(90%) contrast(85%);
+}
+
+    /* Dark mode */
+body.dark-mode {
+  background: #0f1724;
+  color: #e0e7ff;
+}
+
+body.dark-mode a {
+  color: #a5b4fc;
+}
+
+body.dark-mode .card, 
+body.dark-mode section.site-section,
+body.dark-mode #popup-box {
+  background: #1e293b;
+  color: #e0e7ff;
+  box-shadow: 0 10px 36px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .btn-primary {
+  background: linear-gradient(90deg,#3b82f6,#9333ea);
+}
+
+body.dark-mode .btn-ghost {
+  border-color: rgba(165,180,252,0.3);
+  color: #a5b4fc;
+}
+
+body.dark-mode .topnav {
+  backdrop-filter: blur(6px);
+  background: rgba(15,23,36,0.7);
+}
+
+body.dark-mode .map-wrap iframe {
+  filter: invert(90%) contrast(85%);
+}
+
+    #popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#popup-box {
+  background: white;
+  padding: 20px;
+  width: 330px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  animation: slideUp 0.5s ease-out;   /* NEW */
+}
+
+/* Sliding animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    #popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;  /* <-- Add this */
+}
+
+#popup-box {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 10000; /* <-- Add this */
+}
+
+    #popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup-box {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+    :root{
+      --soft-blue: #e9f6fb;
+      --accent-blue: #3fa9f5;
+      --accent-dark: #128f99;
+      --muted: #53626b;
+      --card: #ffffff;
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#fbfeff,#f3fbfc);
+      color:#0f1724;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    a{color:inherit}
+
+    /* PRELOADER - realistic tooth silhouette, bounce + spin */
+    #preloader{
+      position:fixed; inset:0; z-index:9999;
+      display:flex;align-items:center;justify-content:center;background:var(--card);
+    }
+    .preloader-wrap{
+      width:110px;height:110px;border-radius:50%;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,#e8fbff,#e2f7fb);
+      box-shadow:0 18px 50px rgba(13,155,179,0.08);
+      animation: preload-bounce 1.2s ease-in-out infinite;
+    }
+    .preloader-tooth{
+      width:58px;height:58px; display:block;
+      animation: preload-spin 1.6s linear infinite;
+      transform-origin:center;
+    }
+    @keyframes preload-spin { to{ transform:rotate(360deg); } }
+    @keyframes preload-bounce {
+      0%{ transform: translateY(0) }
+      50%{ transform: translateY(-10px) scale(1.02) }
+      100%{ transform: translateY(0) }
+    }
+
+    /* Top navigation - slim */
+    .topnav{
+      display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 20px;
+      background:transparent; position:sticky; top:0; z-index:80;
+      backdrop-filter: blur(6px);
+    }
+    .topnav a{ text-decoration:none; color:var(--muted); font-weight:700; padding:8px 10px; border-radius:8px;}
+    .topnav a:hover{ background:rgba(63,169,245,0.08); color:var(--accent-dark); transform:translateY(-2px) }
+
+    /* HERO - full width gradient & centered title
+       UPDATED: left column contains stacked title (more vertical),
+       right column reserved for image/placeholder.
+    */
+    .hero-wrap{
+      background: linear-gradient(180deg, rgba(63,169,245,0.12), rgba(230,245,251,0.6));
+      padding: 64px 18px 20px;
+      position:relative;
+      overflow:visible;
+      display:flex; justify-content:center;
+    }
+    .hero{
+      width:100%; max-width:1150px; display:grid; grid-template-columns: 1fr; gap:18px; align-items:center; text-align:center;
+      padding:30px 18px;
+    }
+
+    /* Hero left: stack title vertically and control width */
+    .hero-left {
+      display:flex;
+      flex-direction:column;
+      align-items:center; /* centered on mobile by default */
+      gap:10px;
+    }
+
+    .logo-kd {
+      width:72px;height:72px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent-blue),#49c7d1);
+      display:grid;place-items:center;color:white;font-weight:800;font-family:Montserrat;
+      font-size:20px;
+    }
+
+    .clinic-title{
+      font-family: "Montserrat", sans-serif;
+      /* larger and more vertical: adjust clamp so it grows on wide screens */
+      font-size: clamp(28px, 5.6vw, 56px);
+      font-weight:800;
+      color:#042a31;
+      margin:8px 0 6px;
+      text-shadow: 0 8px 30px rgba(63,169,245,0.08);
+      letter-spacing:0.2px;
+      /* keep horizontal width limited so text stacks vertically */
+      max-width: 420px;
+      line-height: 1.02;
+    }
+    .clinic-sub{
+      color:var(--muted);
+      font-size: clamp(15px, 1.6vw, 18px);
+      margin:0 0 12px;
+    }
+    .hero-cta{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:12px }
+    .btn{
+      padding:12px 18px; border-radius:12px; text-decoration:none; font-weight:800; cursor:pointer; border:0;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .btn-primary{ background: linear-gradient(90deg,var(--accent-dark),var(--accent-blue)); color:white; box-shadow:0 12px 36px rgba(16,46,50,0.06) }
+    .btn-ghost{ background:transparent; border:1px solid rgba(18,143,153,0.12); color:var(--accent-dark) }
+    .btn:hover{ transform:translateY(-5px); box-shadow:0 18px 40px rgba(16,46,50,0.08) }
+
+    /* hero photo (right column) - placeholder background kept */
+    .hero-photo{
+      border-radius:12px; overflow:hidden; box-shadow:0 18px 46px rgba(4,32,39,0.05);
+      min-height:260px; display:flex; align-items:center; justify-content:center;
+      background: linear-gradient(180deg,#f6fbfc,#eef8fb); /* subtle placeholder */
+    }
+    .hero-photo img{ height: 1000px; width:100%; height:100%; object-fit:cover; display:block }
+
+    /* layered waves - subtle one-time animation */
+    .waves{
+      position: relative; width:100%; height:70px; margin-top:8px; overflow:hidden;
+      pointer-events:none;
+    }
+    /* 3 layered SVG waves with slight offsets - animate once */
+    .wave svg{ width:200%; height:100%; display:block; transform:translateX(-20%); }
+    .wave.wave1{opacity:0.18; transform:translateY(12px)}
+    .wave.wave2{opacity:0.22; transform:translateY(6px)}
+    .wave.wave3{opacity:0.28; transform:translateY(0px)}
+    /* play once - subtle horizontal shift */
+    .wave svg { animation: wave-slide 1.2s ease-out 1; }
+    @keyframes wave-slide {
+      0%{ transform:translateX(-28%) }
+      100%{ transform:translateX(-20%) }
+    }
+
+    /* main content container */
+    .wrap{ max-width:1150px; margin:0 auto; padding:18px; }
+
+    /* sections - spacing & alternating backgrounds */
+    section.site-section{
+      padding: 72px 18px;
+      margin: 18px 0;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 10px 36px rgba(4,32,39,0.03);
+    }
+    section.site-section.alt{
+      background: var(--soft-blue);
+    }
+    section.site-section h2{
+      margin:0 0 12px; font-family:"Montserrat",sans-serif; color:var(--accent-dark); font-size:20px;
+    }
+    .lead-muted{ color:var(--muted); max-width:72ch; margin:0 }
+
+    /* cards (doctor & treatments) - keep previous hover & info-box */
+    .card-container{ display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:18px }
+    .card{
+      background:var(--card); border-radius:12px; box-shadow:0 8px 24px rgba(3,25,30,0.04);
+      flex:1 1 300px; max-width:360px; position:relative; cursor:pointer; overflow:visible;
+      transition: transform .32s cubic-bezier(.2,.9,.2,1), box-shadow .32s;
+    }
+    .card:hover, .card:focus-within { transform: translateY(-12px) scale(1.02); box-shadow:0 28px 70px rgba(3,25,30,0.12); z-index:30; }
+    .card img{ width:100%; height:180px; object-fit:cover; border-top-left-radius:12px; border-top-right-radius:12px; display:block; background:#dfeff8 }
+    .card-content{ padding:14px }
+    .card-title{ font-weight:800; font-size:1.1rem; color:var(--accent-dark); margin:0 0 6px }
+    .card-subtitle{ color:var(--accent-blue); font-weight:700; margin-bottom:8px }
+    .whatsapp-link{ color:var(--accent-dark); font-weight:700; text-decoration:none }
+    .whatsapp-link:hover{ color:var(--accent-blue); text-decoration:underline }
+
+    /* info box reveal */
+    .info-box{
+      background:var(--card); box-shadow:0 12px 36px rgba(3,25,30,0.12);
+      border-radius:10px; position:absolute; top:200px; left:12px; right:12px; padding:12px;
+      opacity:0; pointer-events:none; transform:translateY(18px);
+      transition: opacity .36s ease, transform .36s ease; font-size:.95rem; z-index:40;
+    }
+    .card:hover .info-box, .card:focus-within .info-box{ opacity:1; pointer-events:auto; transform:translateY(0) }
+
+    .procedures-grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:14px }
+
+    /* contact buttons */
+    .contact-grid{ display:flex; gap:12px; flex-wrap:wrap; margin-top:12px }
+    .contact-btn{ flex:1; min-width:150px; padding:12px; border-radius:12px; font-weight:800; color:white; text-decoration:none; display:inline-flex; justify-content:center; gap:10px; transition: transform .16s }
+    .contact-btn:hover{ transform: translateY(-6px) }
+    .call{ background: linear-gradient(90deg,#2bb6c9,#128f99) }
+    .wa{ background: linear-gradient(90deg,#25D366,#19b954) }
+    .mail{ background: linear-gradient(90deg,#6db6ff,#3e99ff) }
+
+    .map-wrap{ border-radius:12px; overflow:hidden; box-shadow:0 12px 30px rgba(3,25,30,0.06); min-height:260px; margin-top:14px }
+    .map-wrap iframe{ width:100%; height:100%; min-height:260px; border:0 }
+
+    footer{ margin-top:36px; text-align:center; color:var(--muted); padding:26px 0 }
+
+    /* responsive adjustments */
+    @media (min-width:901px){
+      /* on wide screens use two-column layout: left = content, right = image/placeholder */
+      .hero{ grid-template-columns: 1fr 420px; text-align:left; align-items:center }
+      .hero .hero-card{ padding-right:28px }
+      .hero-photo{ border-radius:12px; overflow:hidden; box-shadow:0 18px 46px rgba(4,32,39,0.05) }
+      .hero-photo img{ width:100%; height:100%; object-fit:cover; display:block }
+      /* left column align items to the left on desktop */
+      .hero-left { align-items: flex-start; }
+      .hero-cta { justify-content: flex-start; }
+    }
+    @media (max-width:900px){
+      section.site-section{ padding: 48px 14px }
+      .hero{ grid-template-columns: 1fr; text-align:center }
+      .card{ max-width:100% }
+      .info-box{ top:180px; left:10px; right:10px }
+    }
+    @media (max-width:520px){
+      .clinic-title{ font-size:22px }
+      .preloader-wrap{ width:96px;height:96px }
+      .preloader-tooth{ width:48px;height:48px }
+      .hero-wrap{ padding:38px 8px 6px }
+      .waves{ height:56px }
+    }
+  </style>
+</head>
+ <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // DARK MODE TOGGLE (all buttons)
+  document.querySelectorAll('.darkModeToggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+
+      const isDark = document.body.classList.contains('dark-mode');
+      toggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+      toggle.setAttribute('aria-pressed', isDark);
+    });
+  });
+
+  // POPUP
+  const popup = document.getElementById('popup');
+  const popupBox = document.getElementById('popup-box');
+
+  // Show popup after page load
+  window.onload = () => {
+    popup.style.display = 'flex';
+    popupBox.focus(); // focus for accessibility
+  };
+
+  // Close function
+  window.closePopup = () => {
+    popup.style.display = 'none';
+  };
+
+  // Close popup with ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape" && popup.style.display === 'flex') {
+      closePopup();
+    }
+  });
+
+  // Optional: trap focus inside popup while open
+  popup.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      const focusable = popup.querySelectorAll('button, [href], input, select, textarea');
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+  });
+});
+</script>
+
+<body>
+ <div id="popup" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+  <div id="popup-box" tabindex="-1">
+    <h2 id="popup-title">Welcome!</h2>
+    <p>Swaagat hai par kaam abhi bi baaki hai.</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+
+  <!-- PRELOADER -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-wrap" role="img" aria-label="Loading">
+      <!-- clean tooth silhouette SVG -->
+      <svg class="preloader-tooth" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M32 2c6 0 10 4 12 9 2 6 0 12-2 18-2 6-4 11-6 16-1 3-2 5-6 5-4 0-5-2-6-5-2-5-4-10-6-16-2-6-4-12-2-18C22 6 26 2 32 2z" fill="#128f99"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- TOP NAV (slim) -->
+<div class="topnav" role="navigation" aria-label="Primary navigation">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#doctors">Our Doctors</a>
+  <a href="#treatments">Treatments</a>
+  <a href="#hours">Opening Hours</a>
+  <a href="#contact">Contact</a>
+  <a href="#appointment">Book</a>
+  <button class="darkModeToggle" aria-pressed="false">🌙 Dark Mode 
+  </button>
+</div>
+
+
+  <!-- HERO -->
+  <div class="hero-wrap" id="home" role="region" aria-label="Hero section">
+    <div class="wrap hero" data-aos="fade-up" data-aos-duration="850">
+      <!-- LEFT: stacked title/content -->
+      <div class="hero-card" style="background:transparent;padding:0;border-radius:0" data-aos="fade-right" data-aos-duration="850">
+        <div class="hero-left">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div class="logo-kd" aria-hidden="true">KD</div>
+          </div>
+
+          <!-- Stacked title: line-breaks force vertical space -->
+          <h1 class="clinic-title">Kalawati<br>Dental Clinic<br>&amp; Implant Center</h1>
+
+          <div class="clinic-sub">Gentle dentistry • Comfortable care • Confident smiles</div>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#appointment">Book Appointment</a>
+            <a class="btn btn-ghost" href="#treatments">Our Treatments</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: hero photo / placeholder - keep placeholder background for now -->
+      <div class="hero-photo" aria-hidden="true" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="140" style="height:260px;border-radius:12px;overflow:hidden">
+        <!-- You can remove or replace the <img> with your own later.
+             The container already has a subtle placeholder background. -->
+        <img src="images/image4.jpeg" alt="Smiling dental patient and dentist">
+      </div>
+    </div>
+
+    <!-- layered waves (subtle one-time animation) -->
+    <div class="waves" aria-hidden="true">
+      <div class="wave wave1">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="#ffffff" d="M0,160L60,138.7C120,117,240,75,360,72C480,69,600,107,720,122.7C840,139,960,133,1080,106.7C1200,80,1320,32,1380,8L1440, -0.0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+      </div>
+      <div class="wave wave2">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="#f3fbfc" d="M0,192L80,176C160,160,320,128,480,133.3C640,139,800,181,960,197.3C1120,213,1280,203,1360,197.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+      </div>
+      <div class="wave wave3">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="#e9f6fb" d="M0,224L120,213.3C240,203,480,181,720,160C960,139,1200,117,1320,106.7L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN WRAPPER -->
+  <main class="wrap" role="main">
+
+    <!-- ABOUT -->
+    <section id="about" class="site-section" data-aos="fade-right" data-aos-duration="750">
+      <h2>About Kalawati Dental Clinic</h2>
+      <p class="lead-muted">At Kalawati Dental Clinic, located at Mohan Road near Hind Dharam Kaanta, Buddeshwar, Lucknow, we provide evidence-based dental care with a patient-first approach. From preventive hygiene to implant planning, we use modern diagnostics, comfortable techniques, and clear communication to deliver predictable outcomes.</p>
+    </section>
+
+    <!-- DOCTORS -->
+    <section id="doctors" class="site-section alt" data-aos="fade-up" data-aos-duration="750">
+      <h2>Our Doctors</h2>
+      <div class="card-container" role="list" aria-label="Doctors list">
+        <!-- Dr Avinash -->
+        <article class="card" tabindex="0" aria-describedby="doc1-info" data-aos="zoom-in" data-aos-duration="700">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=b7f2bd7a1e5c9c2b" alt="Dr Avinash">
+          <div class="card-content">
+            <h3 class="card-title">Dr. Avinash</h3>
+            <div class="card-subtitle">BDS — Extraction Expert</div>
+            <a class="whatsapp-link" href="tel:+917300537800" aria-label="Call Dr Avinash">Call: 73005 37800</a><br/>
+            <a class="whatsapp-link" href="mailto:dr.avinash148@gmail.com" aria-label="Email Dr Avinash">dr.avinash148@gmail.com</a>
+
+            <div class="info-box" id="doc1-info" role="region" aria-live="polite" aria-hidden="true">
+              <p><strong>Qualifications:</strong> BDS</p>
+              <p><strong>Specialty:</strong> Atraumatic extractions, surgical removal and post-extraction care.</p>
+              <p><strong>Experience:</strong> 10+ years treating complex extractions with patient comfort techniques.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dr Sandhya -->
+        <article class="card" tabindex="0" aria-describedby="doc2-info" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="80">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=9183b9f6d0ef1b7b" alt="Dr Sandhya">
+          <div class="card-content">
+            <h3 class="card-title">Dr. Sandhya</h3>
+            <div class="card-subtitle">BDS — Root Canal Expert</div>
+            <a class="whatsapp-link" href="tel:+917017273317" aria-label="Call Dr Sandhya">Call: 70172 73317</a><br/>
+
+
+            <div class="info-box" id="doc2-info" role="region" aria-live="polite" aria-hidden="true">
+              <p><strong>Qualifications:</strong> BDS</p>
+              <p><strong>Specialty:</strong> Root canal therapy (RCT) and pain-conscious endodontics.</p>
+              <p><strong>Experience:</strong> Skilled in modern endodontic techniques to preserve natural teeth.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TREATMENTS -->
+    <section id="treatments" class="site-section" data-aos="fade-up" data-aos-duration="800">
+      <h2>Treatments</h2>
+      <div class="procedures-grid" role="list" aria-label="Treatments list">
+        <!-- cards repeated similarly -->
+        <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="20">
+          <img class="procedure-image" src="https://images.unsplash.com/photo-1560264418-0b93528c13e3?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=6f1f4c0e" alt="Complete Denture">
+          <div class="card-content">
+            <div class="card-title">Complete Denture</div>
+            <div class="card-subtitle">पूर्ण दाँत</div>
+            <div class="info-box" id="proc1-info" aria-hidden="true">
+              <p>Custom-fitted removable full-arch prosthesis to restore function and facial support.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="40">
+          <img class="procedure-image" src="https://images.unsplash.com/photo-1576765607922-0df1a5e8c6b9?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=2d3f1c2d" alt="Fixed Partial Denture">
+          <div class="card-content">
+            <div class="card-title">Fixed Partial Denture</div>
+            <div class="card-subtitle">स्थायी आंशिक दाँत</div>
+            <div class="info-box" id="proc2-info" aria-hidden="true">
+              <p>Bridges and crown-work to replace missing teeth for function and aesthetics.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="60">
+          <img class="procedure-image" src="https://images.unsplash.com/photo-1588776814546-6f1f7b2a1c2c?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=7a8b9c" alt="Root Canal">
+          <div class="card-content">
+            <div class="card-title">Root Canal Treatment</div>
+            <div class="card-subtitle">रूट कैनाल ट्रीटमेंट</div>
+            <div class="info-box" id="proc3-info" aria-hidden="true">
+              <p>Digital RCT with precise cleaning, shaping and filling to save infected teeth.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="80">
+          <img class="procedure-image" src="https://images.unsplash.com/photo-1588774065556-2c1d1a6d6a9b?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b4c5d" alt="Orthodontic care">
+          <div class="card-content">
+            <div class="card-title">Fixed & Removable Orthodontic Treatment</div>
+            <div class="card-subtitle">स्थायी एवं हटाने योग्य ऑर्थोडॉन्टिक</div>
+            <div class="info-box" id="proc4-info" aria-hidden="true">
+              <p>Braces and aligners for tooth alignment and bite correction.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="100">
+          <img class="procedure-image" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=aaa" alt="Tooth coloured filling">
+          <div class="card-content">
+            <div class="card-title">Tooth Coloured Filling</div>
+            <div class="card-subtitle">दांत के रंग का फिलिंग</div>
+            <div class="info-box" id="proc5-info" aria-hidden="true">
+              <p>Composite resin fillings matched to your shade for a natural finish.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="120">
+          <img class="procedure-image" src="https://images.unsplash.com/photo-1556228720-9d9e79e9e4d7?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=bbb" alt="Bleaching">
+          <div class="card-content">
+            <div class="card-title">Bleaching (Teeth Whitening)</div>
+            <div class="card-subtitle">दाँत का सफेद करना</div>
+            <div class="info-box" id="proc6-info" aria-hidden="true">
+              <p>Safe, clinic-supervised whitening with sensitivity protection.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="140">
+          <img class="procedure-image" src="https://images.unsplash.com/photo-1588776814546-6f1f7b2a1c2c?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=ccc" alt="Cleaning">
+          <div class="card-content">
+            <div class="card-title">Cleaning & Scaling</div>
+            <div class="card-subtitle">सफाई और स्केलिंग</div>
+            <div class="info-box" id="proc7-info" aria-hidden="true">
+              <p>Professional plaque & tartar removal to keep gums healthy.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="160">
+          <img class="procedure-image" src="https://images.unsplash.com/photo-1588774065624-3e6bcbe3a7a1?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=ddd" alt="Extractions">
+          <div class="card-content">
+            <div class="card-title">Extractions</div>
+            <div class="card-subtitle">दांत निकालना</div>
+            <div class="info-box" id="proc8-info" aria-hidden="true">
+              <p>Comfort-focused extractions with aftercare & replacement options.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0" data-aos="fade-up" data-aos-delay="180">
+          <img class="procedure-image" src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=eee" alt="Child dental care">
+          <div class="card-content">
+            <div class="card-title">Child Dental Care</div>
+            <div class="card-subtitle">बच्चों का दंत चिकित्सा</div>
+            <div class="info-box" id="proc9-info" aria-hidden="true">
+              <p>Gentle pediatric care: checkups, fluoride, sealants & habit counselling.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOURS -->
+    <section id="hours" class="site-section alt" data-aos="fade-up" data-aos-duration="700">
+      <h2>Opening Hours</h2>
+      <div style="margin-top:12px; display:flex; gap:12px; align-items:center; flex-wrap:wrap">
+        <div>
+          <div style="color:var(--muted)">Weekdays</div>
+          <div style="font-weight:800">9:00 AM — 8:00 PM</div>
+        </div>
+        <div style="margin-left:auto; text-align:right">
+          <div style="color:var(--muted)">Saturday</div>
+          <div style="font-weight:800">9:00 AM — 6:00 PM</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="site-section" data-aos="fade-right" data-aos-duration="700">
+      <h2>Contact Us</h2>
+      <p class="lead-muted">For appointments, emergencies or enquiries call or message us — we reply quickly.</p>
+
+      <div class="contact-grid">
+        <a class="contact-btn call" href="tel:+917017273317" aria-label="Call clinic"><i class="fa fa-phone"></i> Call Us</a>
+        <a class="contact-btn wa" href="https://wa.me/917017273317" target="_blank" rel="noopener" aria-label="WhatsApp clinic"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a class="contact-btn mail" href="mailto:dr.avinash148@gmail.com" aria-label="Email clinic"><i class="fa fa-envelope"></i> Email Us</a>
+      </div>
+
+      <div style="margin-top:14px;color:var(--muted)">
+        <strong>Phone:</strong> 7017273317 • <strong>Email:</strong> dr.avinash148@gmail.com
+        <div style="margin-top:6px"><strong>Address:</strong> Kalawati Dental Clinic, Mohan Road, Near Hind Dharam Kaanta, Buddeshwar, Lucknow</div>
+      </div>
+    </section>
+
+    <!-- LOCATION (map) -->
+    <section class="site-section alt" data-aos="fade-up" data-aos-duration="700">
+      <h2>Location</h2>
+      <div class="map-wrap" role="region" aria-label="Clinic location map">
+        <iframe src="https://www.google.com/maps?q=Kalawati%20Dental%20Clinic%20Mohan%20Road%20Near%20Hind%20Dharam%20Kaanta%20Buddeshwar%20Lucknow&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kalawati Dental Clinic"></iframe>
+      </div>
+      <div style="margin-top:8px;color:var(--muted);font-size:13px">Tip: Click the map to open Google Maps for directions. (Short link: https://maps.app.goo.gl/wie7bw5iv5B8F2ST9)</div>
+    </section>
+
+    <!-- APPOINTMENT -->
+    <section id="appointment" class="site-section" data-aos="fade-up" data-aos-duration="700">
+      <h2>Book an Appointment</h2>
+      <form action="mailto:dr.avinash148@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()" style="max-width:680px;margin-top:12px">
+        <label for="name">Full Name *</label>
+        <input id="name" name="Name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e1eef4;margin-top:8px;">
+
+        <label for="phone" style="margin-top:12px">Phone Number *</label>
+        <input id="phone" name="Phone" required pattern="[0-9]{10}" placeholder="10 digit number" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e1eef4;margin-top:8px;">
+
+        <label for="email" style="margin-top:12px">Email Address</label>
+        <input id="email" name="Email" type="email" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e1eef4;margin-top:8px;">
+
+        <label for="treatment" style="margin-top:12px">Select Treatment *</label>
+        <select id="treatment" name="Treatment" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e1eef4;margin-top:8px;">
+          <option value="">--Please choose an option--</option>
+          <option>Complete Denture</option>
+          <option>Fixed Partial Denture</option>
+          <option>Root Canal Treatment</option>
+          <option>Fixed & Removable Orthodontic Treatment</option>
+          <option>Tooth Coloured Filling</option>
+          <option>Bleaching</option>
+          <option>Cleaning & Scaling</option>
+          <option>Extractions</option>
+          <option>Child Dental Care</option>
+        </select>
+
+        <label for="date" style="margin-top:12px">Preferred Date</label>
+        <input id="date" name="Date" type="date" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e1eef4;margin-top:8px;">
+
+        <label for="message" style="margin-top:12px">Additional Message</label>
+        <textarea id="message" name="Message" rows="3" placeholder="Any additional info..." style="width:100%;padding:10px;border-radius:8px;border:1px solid #e1eef4;margin-top:8px;"></textarea>
+
+        <div style="text-align:center;margin-top:18px">
+          <button type="submit" style="background:linear-gradient(90deg,var(--accent-dark),var(--accent-blue));border:none;color:white;padding:12px 20px;border-radius:10px;font-weight:800;cursor:pointer">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Kalawati Dental Clinic &amp; Implant Center — Mohan Road, Lucknow</p>
+    </footer>
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // init AOS with playful-but-smooth easing
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true });
+
+    // hide preloader after load (smooth fade)
+    window.addEventListener('load', function(){
+      setTimeout(()=> {
+        const pre = document.getElementById('preloader');
+        if(!pre) return;
+        pre.style.transition = 'opacity .5s ease';
+        pre.style.opacity = '0';
+        setTimeout(()=> pre.remove(), 650);
+      }, 520);
+    });
+
+    // set copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // focus/keyboard accessibility for info-box reveal
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('focusin', ()=> card.classList.add('focused'));
+      card.addEventListener('focusout', ()=> card.classList.remove('focused'));
+    });
+
+    // prevent iframe interactions on very small screens
+    (function(){
+      const iframe = document.querySelector('.map-wrap iframe');
+      if(iframe && window.innerWidth < 700) iframe.style.pointerEvents = 'none';
+    })();
+
+    // simple form validation
+    function validateForm(){
+      const phone = document.getElementById('phone').value.trim();
+      if(!/^[0-9]{10}$/.test(phone)){ alert('Please enter a valid 10-digit phone number.'); return false; }
+      return true;
+    }
+  </script>
+
+
+</body>
+</html>
